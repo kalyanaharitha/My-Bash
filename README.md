@@ -10,19 +10,5 @@ This repository contains useful **automation scripts** that help streamline and 
 
 ---
 
-## Script 1: Log Cleanup & Archiving
-
-**Description:**  
-Compresses `.log` files older than 7 days from `/var/log/myapp/` and moves them to an archive directory.
-
-```bash
-#!/bin/bash
-
-LOG_DIR="/var/log/myapp"
-ARCHIVE_DIR="/var/log/myapp/archive"
-
-mkdir -p "$ARCHIVE_DIR"
-find "$LOG_DIR" -name "*.log" -mtime +7 -exec gzip {} \; -exec mv {}.gz "$ARCHIVE_DIR" \;
-#!/bin/bash
 
 
